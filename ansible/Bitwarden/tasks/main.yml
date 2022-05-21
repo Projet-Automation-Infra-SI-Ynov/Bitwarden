@@ -1,7 +1,7 @@
 ---
 # tasks file for Bitwarden
 
-- name: Download registry repository
+- name: Download Bitwarden repository
   git:
     repo: 'https://github.com/Projet-Automation-Infra-SI-Ynov/Bitwarden.git'
     dest: /home/administrateur/bitwarden
