@@ -5,7 +5,7 @@
   git:
     repo: 'https://github.com/Projet-Automation-Infra-SI-Ynov/Bitwarden.git'
     dest: /home/administrateur/bitwarden
-    version: develop
+    version: master
 
 - name: Deploy Docker Compose Bitwarden
   docker_compose:
