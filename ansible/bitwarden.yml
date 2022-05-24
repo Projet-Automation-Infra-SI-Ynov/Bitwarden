@@ -1,0 +1,6 @@
+- hosts: bitwarden
+  become: yes
+  roles:
+    - role: Docker
+    - role: Git
+    - role: Bitwarden

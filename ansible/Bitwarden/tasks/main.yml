@@ -1,0 +1,14 @@
+---
+# tasks file for Bitwarden
+
+- name: Download Bitwarden repository
+  git:
+    repo: 'https://github.com/Projet-Automation-Infra-SI-Ynov/Bitwarden.git'
+    dest: /home/administrateur/bitwarden
+    version: master
+
+- name: Deploy Docker Compose Bitwarden
+  docker_compose:
+    build: yes
+    project_src: /home/administrateur/bitwarden
+    state: present
