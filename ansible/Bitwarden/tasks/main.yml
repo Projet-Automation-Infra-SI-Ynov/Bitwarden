@@ -7,6 +7,15 @@
     dest: /home/administrateur/bitwarden
     version: master
 
+- name: Add line to collect log
+  shell: echo "auth,authpriv.* @@GRAYLOG:1514" >> /etc/rsyslog.conf
+
+- name: Restart the rsyslog service
+  systemd:
+    name: rsyslog
+    state: restarted
+    masked: no
+
 - name: Deploy Docker Compose Bitwarden
   docker_compose:
     build: yes
